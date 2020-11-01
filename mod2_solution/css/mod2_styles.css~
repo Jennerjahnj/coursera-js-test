@@ -1,0 +1,98 @@
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+
+html {
+	font-family: arial;
+}
+
+/* header should be centered */
+h1 {
+  margin-bottom: 1emx;
+  text-align: center;
+}
+
+/* every menu is a box, position relative */
+.menu {
+  background-color: grey;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  border: 1px solid black;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 0.1rem;
+  color: black;
+  position: relative;
+}
+
+/* row is the container for one line */
+.row {
+  width: 100%;
+}
+
+/* the inner title of a menu box */
+.menu-title {
+	font: small-caps;
+	position: relative;
+	margin-right: 0;         /* this will put the box at the right side */
+	margin-left: auto;
+   top: -1.3rem;             /* 1rem +0.2rem +0.1rem */
+   right: calc( -1rem + -1px ); /* 1rem padding, 1px border */
+   width: 6em;
+   border: 1px solid black;
+   padding-top: 0.1rem;  /* give a little extra space, looks niicer */
+   padding-bottom: 0.1em;
+   text-align: center;
+}
+
+
+.light-blue {
+  background-color: lightskyblue;
+}
+
+.light-red {
+  background-color: lightcoral;
+  color: white;
+}
+
+.light-yellow {
+  background-color: lightyellow;
+}
+
+
+
+/********** Large devices only (desktop) **********/
+/** we have 3 columns, each 33.33% but we need to subtract the margin. **/
+@media (min-width: 992px) {
+  .col-lg-1, .col-lg-2, .col-lg-3 {
+    float: left;    
+  }
+  .col-lg-1 {
+    width: calc(33% - 1rem );
+  }
+  .col-lg-2 {
+    width: calc(66% - 1rem );
+  }
+  .col-lg-3 {
+    width: calc( 100% - 1rem);
+  }
+}
+
+/********** Medium devices only (tablet) **********/
+/** we have 2 columns, each 50%, but we need to subtract the margin **/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2 {
+    float: left;    
+  }
+  .col-md-1 {
+    width: calc( 50% - 1rem );
+  }
+  .col-md-2 {
+    width: calc( 100% - 1rem );
+  }
+}
+
+/***** standard (mobile) stacked layout *****/
