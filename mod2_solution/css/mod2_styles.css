@@ -13,6 +13,10 @@ h1 {
   text-align: center;
 }
 
+.menu > p {
+  margin-top: 0rem;
+  }
+
 /* every menu is a box, position relative */
 .menu {
   background-color: grey;
@@ -33,12 +37,17 @@ h1 {
   width: 100%;
 }
 
-/* the inner title of a menu box */
+/* the inner title of a menu box 
+   we could also use absolute positioning here, but then we need padding-top with a fixed size
+   because we don't have the height of the menu title.
+   If we would then increase the font size of the title only it would overlap the text. 
+   So we are using margin-right = 0 and margin-left = auto */
 .menu-title {
-	font: small-caps;
+	font-variant: small-caps;
 	position: relative;
 	margin-right: 0;         /* this will put the box at the right side */
 	margin-left: auto;
+	margin-bottom: 0rem;
    top: -1.3rem;             /* 1rem +0.2rem +0.1rem */
    right: calc( -1rem + -1px ); /* 1rem padding, 1px border */
    width: 6em;
